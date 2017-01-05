@@ -157,7 +157,7 @@
 
 	<script src="/js/jquery.min.js"></script>
 	
-	<link rel="stylesheet" href="/css/highlight/solarized-white.css">
+	<link rel="stylesheet" href="/css/highlight/solarized-light.css">
 	
 	<!-- UC Browser Compatible-->
 	<script>
@@ -334,14 +334,15 @@
 	<!-- Post thumbnail -->
 	
 		<!-- Post Header Info -->
-		<div class="post-header_info without-thumbnail">
+		<div class="post-header_info with-thumbnail">
 			<!-- Author Avatar & Name -->
 			<img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="tom2nonames's avatar">
 			<span class="name-span">tom2nonames</span>
 		</div>
-	
-		<!-- Null Thumbnail -->
-		<div class="post_thumbnail-null">
+			
+		<!-- Custom thumbnail -->
+		<div class="post_thumbnail-custom">
+			<img src="/img/mac/hackintosh-logo-big.jpg">
 	
 	</div>
 
@@ -357,7 +358,7 @@
 			<p class="post-title">
 				黑苹果安装指南-TH87G-P
 			</p>
-			<h3 id="硬件配置"><a href="#硬件配置" class="headerlink" title="硬件配置"></a>硬件配置</h3><table>
+			<h3 id="I-硬件配置"><a href="#I-硬件配置" class="headerlink" title="I. 硬件配置"></a>I. 硬件配置</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">硬件</th>
@@ -401,12 +402,12 @@
 </table>
 <p><img src="/img/mac/1-1.jpg" alt=""><br><img src="/img/mac/1-2.jpg" alt=""></p>
 <hr>
-<h3 id="前提说明"><a href="#前提说明" class="headerlink" title="前提说明"></a>前提说明</h3><p><strong>因本人已有macbook pro设备, 所以所有配置相关工具均为mac版；如需从win上开始安装配置的朋友，请在pcBeta 黑果论坛上另行搜贴；</strong></p>
+<h3 id="II-前提说明"><a href="#II-前提说明" class="headerlink" title="II. 前提说明"></a>II. 前提说明</h3><p><strong>因本人已有macbook pro设备, 所以所有配置相关工具均为mac版；如需从win上开始安装配置的朋友，请在pcBeta 黑果论坛上另行搜贴；</strong></p>
 <p><strong>由于主板为H87芯片组，i5-4590 是4.5代酷睿，主板BIOS需要刷ROM升级方可点亮；</strong></p>
 <p><strong>本人是先对硬盘分区，并预留mac分区，之后安装好win8.1；再用U盘启动Clover引导安装Mac系统；再完成Clover硬盘引导；</strong></p>
 <p><strong>硬盘已基于GPT分区，uEFI引导，并安装好windows 8.1 企业版；本文不再讲述win8.1安装过程；</strong></p>
 <hr>
-<h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><table>
+<h3 id="III-常用软件"><a href="#III-常用软件" class="headerlink" title="III.常用软件"></a>III.常用软件</h3><table>
 <thead>
 <tr>
 <th>名称</th>
@@ -458,7 +459,7 @@
 </tbody>
 </table>
 <hr>
-<h3 id="硬盘分区"><a href="#硬盘分区" class="headerlink" title="硬盘分区"></a>硬盘分区</h3><table>
+<h3 id="IV-硬盘分区"><a href="#IV-硬盘分区" class="headerlink" title="IV. 硬盘分区"></a>IV. 硬盘分区</h3><table>
 <thead>
 <tr>
 <th>No.</th>
@@ -508,7 +509,7 @@
 </table>
 <p><a href="baike.baidu.com/link?url=zHW1iLHFvT-wYcUC3mzdCZabrSKU15x-HZCsByGQmdgXtdMpYab6azhIXmZoRKesME167jm8m8s6gYktuXUC-_">*MSR 百度百科说明</a></p>
 <hr>
-<h3 id="BIOS参数设定与BIOS电源管理补丁"><a href="#BIOS参数设定与BIOS电源管理补丁" class="headerlink" title="BIOS参数设定与BIOS电源管理补丁"></a>BIOS参数设定与BIOS电源管理补丁</h3><p>Weibu TH87G-P 主板BIOS信息：</p>
+<h3 id="V-BIOS参数设定与BIOS电源管理补丁"><a href="#V-BIOS参数设定与BIOS电源管理补丁" class="headerlink" title="V. BIOS参数设定与BIOS电源管理补丁"></a>V. BIOS参数设定与BIOS电源管理补丁</h3><p>Weibu TH87G-P 主板BIOS信息：</p>
 <table>
 <thead>
 <tr>
@@ -580,60 +581,57 @@ Boot
     Launch CSM                       [Disabled]
 </code></pre><h4 id="2-PMPatch-对Bios打电源管理补丁，须根据主板型号确定后操作"><a href="#2-PMPatch-对Bios打电源管理补丁，须根据主板型号确定后操作" class="headerlink" title="2. PMPatch //对Bios打电源管理补丁，须根据主板型号确定后操作"></a>2. PMPatch //对Bios打电源管理补丁，须根据主板型号确定后操作</h4><p>参数贴: <a href="http://bbs.pcbeta.com/viewthread-1323703-1-1.html" target="_blank" rel="external">[PMPatch] UEFI patching utility</a></p>
 <hr>
-<h3 id="Clover-OS-X-Yosemite-10-10-4-U盘EFI启动安装盘制作"><a href="#Clover-OS-X-Yosemite-10-10-4-U盘EFI启动安装盘制作" class="headerlink" title="Clover + OS X Yosemite 10.10.4 U盘EFI启动安装盘制作"></a>Clover + OS X Yosemite 10.10.4 U盘EFI启动安装盘制作</h3><ol>
+<h3 id="VI-Clover-OS-X-Yosemite-10-10-4-U盘EFI启动安装盘制作"><a href="#VI-Clover-OS-X-Yosemite-10-10-4-U盘EFI启动安装盘制作" class="headerlink" title="VI. Clover + OS X Yosemite 10.10.4 U盘EFI启动安装盘制作"></a>VI. Clover + OS X Yosemite 10.10.4 U盘EFI启动安装盘制作</h3><ol>
 <li><p>选一个至少8G的U盘，用Mac中自带的[磁盘工具]将其分成一个格式为HFS+的分区，命名为Install OS X Yosemite；</p>
 </li>
 <li><p>从Apple官网下载 OS X Yosemite.app，版本 10.10.4 <img src="/img/mac/1-3.jpg" alt=""></p>
 </li>
 <li><p>在Mac终端中执行如下指令,执行中会显示进度，当显示Done,表示执行成功；</p>
-<p><code>sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia 
---volume /Volumes/Install\ OS\ X\ Yosemite --applicationpath /Applications/Install\ OS\ X\ Yosemite.app —nointeraction</code><br>*指令中红色字表示U盘分区卷名 (/Volumes/Install\ OS\ X\ Yosemite)</p>
+<pre><code>sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia  \
+     --volume /Volumes/Install\ OS\ X\ Yosemite  \
+     --applicationpath /Applications/Install\ OS\ X\ Yosemite.app \
+      —nointeraction  
+</code></pre><p><em>\</em>指令中 –volume 后的部分表示U盘分区卷名*</p>
 </li>
 <li><p>使用 EFI Tools Clover，安装Clover至U盘的EFI分区</p>
 <p>参考贴：<a href="bbs.pcbeta.com/viewthread-1551428-1-1.html">[搬运]超简单的clover 引导Yosemite原版安装U盘制作方法</a></p>
 </li>
 </ol>
 <hr>
-<h3 id="使用Clover-Configurator-设定Clover的参数"><a href="#使用Clover-Configurator-设定Clover的参数" class="headerlink" title="使用Clover Configurator 设定Clover的参数"></a>使用Clover Configurator 设定Clover的参数</h3><ol>
-<li><p>开启Cover Configurator，软件会提示没有发现config.plist,按提示开始挂载U盘的EFI分区,并选择需要编辑的config文件；（前提是U盘已插在PC上并已挂载，EFI是隐藏分区没有自动挂载）<br><img src="/img/mac/1-4.jpg" alt=""><br><img src="/img/mac/1-5.jpg" alt=""></p>
+<h3 id="VII-使用Clover-Configurator-设定Clover的参数"><a href="#VII-使用Clover-Configurator-设定Clover的参数" class="headerlink" title="VII. 使用Clover Configurator 设定Clover的参数"></a>VII. 使用Clover Configurator 设定Clover的参数</h3><ol>
+<li><p>开启<code>Cover Configurator</code>，软件会提示没有发现<code>config.plist</code>,按提示开始挂载U盘的EFI分区,并选择需要编辑的config文件；（前提是U盘已插在PC上并已挂载，EFI是隐藏分区没有自动挂载）<br><img src="/img/mac/1-4.jpg" alt=""><br><img src="/img/mac/1-5.jpg" alt=""></p>
 </li>
-<li><p>以下为我配置的Clover参数，配置完成后请按 Command + S 保存即可</p>
-<pre><code>Acpi  
-    DSDT Name: DSDT.aml //在没有生成DSDT之前设为空
-    //Acpi中其它项目均无需勾选
-
-Boot
-    -v             //啰嗦模式，用于调试排错
-    arch=x86_64    //启动64位内核
-    -xcpm         //启用电源管理
-    dart=0        //关闭 CPU的VT-D支持，
-                //也可在Bios中关闭，不然会导致无法进安装介面
-    kext-dev-mode=1    //默认强制开启，选不选都会开启
-    Default Boot Volume: mac    //在没有安装Mac OS X 之前设为空
-
-Cpu //均为空
-
-Devices
-    Fake ID / IntelGFX: 0x04128086    //用于识别核显 hd4600
+<li><p>以下为我配置的Clover参数，配置完成后请按 <code>Command + S</code> 保存即可</p>
+<p> <strong>Acpi</strong></p>
+<pre><code>DSDT Name: DSDT.aml //在没有生成DSDT之前设为空
+//Acpi中其它项目均无需勾选
+</code></pre><p> <strong>Boot</strong></p>
+<pre><code>-v             //啰嗦模式，用于调试排错
+arch=x86_64    //启动64位内核
+-xcpm         //启用电源管理
+dart=0        //关闭 CPU的VT-D支持，
+            //也可在Bios中关闭，不然会导致无法进安装介面
+kext-dev-mode=1    //默认强制开启，选不选都会开启
+Default Boot Volume: mac    //在没有安装Mac OS X 之前设为空
+</code></pre><p> <strong>Cpu</strong> //均为空</p>
+<p> <strong>Devices</strong></p>
+<pre><code>Fake ID / IntelGFX: 0x04128086    //用于识别核显 hd4600
     USB
         Inject        //勾选
         Add ClockID    //勾选
         FixOwnership    //勾选
         HighCurrent    //勾选
-
-Gui    //此项内容，请根据实际情况与喜好定义
-    Language: en
-        Theme: yosemitelogin
+</code></pre><p> <strong>Gui</strong>    //此项内容，请根据实际情况与喜好定义</p>
+<pre><code>Language: en
+    Theme: yosemitelogin
     Screen Resolution: 1680x1050
-
-Graphics
-    ig-platform-id: 0x0c260000        //用于识别核显 hd4600的接口
-    Inject Intel //勾选
-
-Kernel and Kext Patches
-    KernelPM        //针对 Haswell内核的CPU,改善无法进入安装介面的问题
-    Apple RTC        //同上，当只勾选KernelPM无效时，可尝试同时勾选
-    Asus AICPUPM    //同上
+</code></pre><p> <strong>Graphics</strong></p>
+<pre><code>ig-platform-id: 0x0c260000        //用于识别核显 hd4600的接口
+Inject Intel //勾选
+</code></pre><p> <strong>Kernel and Kext Patches</strong></p>
+<pre><code>KernelPM        //针对 Haswell内核的CPU,改善无法进入安装介面的问题
+Apple RTC        //同上，当只勾选KernelPM无效时，可尝试同时勾选
+Asus AICPUPM    //同上
 
 KextsToPatch     //以下为新增三项，原始默认的AppleAHCIPort不变
     Name*             Find*HEX      Replace*[HEX]
@@ -641,85 +639,76 @@ KextsToPatch     //以下为新增三项，原始默认的AppleAHCIPort不变
     IOGraphicsFamily  85C0746B48  31C0745B48
     IOGraphicsFamily  41B8C4EB11  41B8C4EB31
 //以上三项是修复启动第二阶段花屏的问题
-
-SMBIOS
-    Memory
-        Chennels: Dual Channel    //处理内存信息不正常认别和显示
-        SlotCount: 2            //同上
-</code></pre></li>
-</ol>
-<hr>
-<h4 id="Tools-Install-Drivers（如图所示）"><a href="#Tools-Install-Drivers（如图所示）" class="headerlink" title="Tools / Install Drivers（如图所示）"></a>Tools / Install Drivers（如图所示）</h4><p>由于是uEF引导，只需在 Ddevices uefi 64 bit 和 Extra Drivers 中勾选需要的驱动即可；32bit/64bit中的驱动均无需关心，也可将其全部取消勾选，以节约</p>
-<p><img src="/img/mac/1-6.jpg" alt=""></p>
-<p>EFI分区空间占用；</p>
-<p>驱动配置完成后，可用Finder核对 /EFI/EFI/CLOVER/drivers64UEFI中的驱动，如下图所示只需如下驱动：<br>&gt;</p>
-<blockquote>
+</code></pre><p> <strong>SMBIOS</strong></p>
+<pre><code>Memory
+    Chennels: Dual Channel    //处理内存信息不正常认别和显示
+    SlotCount: 2            //同上
+</code></pre><p> <strong>Tools / Install Drivers</strong>（如图所示） </p>
+<p> 由于是uEF引导，只需在 <code>Devices uefi 64 bit</code> 和 <code>Extra Drivers</code> 中勾选需要的驱动即可；32bit/64bit中的驱动均无需关心，也可将其全部取消勾选，以节约</p>
+<p> <img src="/img/mac/1-6.jpg" alt=""></p>
+<p> EFI分区空间占用；</p>
+<p> 驱动配置完成后，可用Finder核对 <code>/EFI/EFI/CLOVER/drivers64UEFI</code>中的驱动，如下图所示只需如下驱动：</p>
 <ol>
 <li>FSInject-64.efi   </li>
 <li>HFSPlus-64.efi  </li>
 <li>HFSPlus.efi   </li>
 <li>NTFS.efi  </li>
 <li>OsxAptioFix2Drv-64.efi  </li>
-<li>OsxFatBinaryDrv-64.efi  </li>
+<li>OsxFatBinaryDrv-64.efi</li>
 </ol>
-</blockquote>
-<p><img src="/img/mac/1-7.jpg" alt=""></p>
-<hr>
-<h4 id="Tools-Themes-如图所示"><a href="#Tools-Themes-如图所示" class="headerlink" title="Tools / Themes (如图所示)"></a>Tools / Themes (如图所示)</h4><p><img src="/img/mac/1-8.jpg" alt=""></p>
-<p> 黑苹果必用Kext驱动 — FakeSMC.kext</p>
-<p> 此驱动请下载并拷贝到U盘EFI分区中的/EFI/EFI/CLOVER/kexts/10.10/下面；</p>
+</li>
+</ol>
+<pre><code>![](/img/mac/1-7.jpg)
+</code></pre><hr>
+<p>  <strong>Tools / Themes</strong> (如图所示)</p>
+<p><img src="/img/mac/1-8.jpg" alt=""></p>
+<h3 id="VIII-黑苹果必用Kext驱动-—-FakeSMC-kext"><a href="#VIII-黑苹果必用Kext驱动-—-FakeSMC-kext" class="headerlink" title="VIII. 黑苹果必用Kext驱动 — FakeSMC.kext**"></a>VIII. 黑苹果必用Kext驱动 — FakeSMC.kext**</h3><p> <strong>此驱动请下载并拷贝到U盘EFI分区中的<code>/EFI/EFI/CLOVER/kexts/10.10/</code>下面；</strong></p>
 <p><img src="/img/mac/1-9.jpg" alt=""></p>
-<p>*没有使用此驱动的后果，就是进入不了Mac系统,切记一定要执行并核对无误！！！</p>
+<p><em>没有使用此驱动的后果，就是进入不了Mac系统,切记一定要执行并核对无误！！！</em></p>
 <hr>
-<h4 id="将OS-X-Yosemite-10-10-4-安装至硬盘-mac卷中"><a href="#将OS-X-Yosemite-10-10-4-安装至硬盘-mac卷中" class="headerlink" title="将OS X Yosemite 10.10.4 安装至硬盘 mac卷中"></a>将OS X Yosemite 10.10.4 安装至硬盘 mac卷中</h4><blockquote>
-<ol>
+<h3 id="IX-将OS-X-Yosemite-10-10-4-安装至硬盘-mac卷中"><a href="#IX-将OS-X-Yosemite-10-10-4-安装至硬盘-mac卷中" class="headerlink" title="IX. 将OS X Yosemite 10.10.4 安装至硬盘 mac卷中"></a>IX. 将OS X Yosemite 10.10.4 安装至硬盘 mac卷中</h3><ol>
 <li><p>在保证BIOS设定与U盘引导安装盘制作完毕后，请将u盘插在PC的USB插槽中，启动pc进入BIOS, 在引导选项中选择优先引导项；</p>
-<blockquote>
-<p>   Boot Option Priorities<br>…. …   Boot Option #1     [UEFI OS (Kingtson ..)] //红色部分是U盘的型号</p>
-</blockquote>
+<pre><code>Boot Option Priorities  
+    Boot Option #1     [UEFI OS (Kingtson ..)] //红色部分是U盘的型号    
+</code></pre><p> <em>按F10保存后重启PC</em></p>
+</li>
+<li><p>几秒后会看到Clover 引导介面，选择 <code>[Boot OS X Install from Install OS X Yosemite]</code> 按空格键进入，再选 <code>[Boot Mac OS X with injected kexts]</code> 后按回车键；</p>
+</li>
+<li><p>如果以上配置无误，在<strong>啰嗦模式</strong>的黑底白字的内核加载后（<code>引导第一阶段，内核与驱动加载</code>），正常情况下会显示黑底白苹果进度条状态（<code>引导第二阶段，系统加载</code>），其间有短暂花屏（小于1秒），之后即会进入安装介面；如下图所示：<br><img src="/img/mac/1-10.jpg" alt=""> </p>
+</li>
+<li><p>安装介面『准备安装』下，按提示一步一步操作：选择语言-&gt;设置安装继续 或是 磁盘设置-&gt;选择安装目标分区-&gt; 直至『正在准备安装，你的电脑将自动重新启动』，进度条下方会显示『剩余大约7分钟』，当进度条下方显示为『剩余大约1秒钟』，请不要以为一会儿就完成了，<strong>这时系统还在拷贝文件做准备工作，处理会需要比较久的时间，大约15分钟~40分钟不等; 不要以为系统卡住；请保持耐心，安装准备工作完成后系统后自动重启，不要人为干预或强行中断和重启；较多朋友均是落入此坑中不能自拔；(常见于使用U盘安装时);</strong>    </p>
+</li>
+<li><p>待”准备安装”完成后，系统会自动重启，之后进入到Clover引导介面；请不要以为系统安装完成了，而去找Mac的硬盘分区引导, 你是找不到的；目前只是完成了安装的第一阶段—『准备安装』，第二阶段『正式安装』即将开始；你只需按第2步继续进入安装介面，并按系统提示一步一步来，最终会看到『安装系统到mac』的提示，进度条下方会显示安装剩余时间，一般十多分钟即可安装完成并重启；（<code>安装过程中，尽量不时动动鼠标，不要让PC进入睡眠模式</code>）</p>
+</li>
+<li><p>再次进入到Clover引导介面，此时就可以找到已安装Mac系统的硬盘引导了，找到后按回车键进入到初始化之个性设定，按提示逐步操作： </p>
+<p> <code>地区与时区选择</code> -&gt; <code>Intelnet连接方式设定</code> -&gt; <code>信息传输设定</code> -&gt; <code>创建电脑帐户</code> —&gt; <code>Apple ID登录设定</code> -&gt; <code>看到桌面即表示安装完成；</code></p>
 </li>
 </ol>
-<p><strong>按F10保存后重启PC</strong></p>
-<ol>
-<li><p>几秒后会看到Clover 引导介面，选择 [Boot OS X Install from Install OS X Yosemite]按空格键进入，再选 [Boot Mac OS X with injected kexts]后按回车键；</p>
-</li>
-<li><p>如果以上配置无误，在啰嗦模式的黑底白字的内核加载后（引导第一阶段，内核与驱动加载），正常情况下会显示黑底白苹果进度条状态（引导第二阶段，系统加载），其间有短暂花屏（小于1秒），之后即会进入安装介面；如下图所示：<img src="/img/mac/1-10.jpg" alt=""> </p>
-</li>
-<li><p>安装介面『准备安装』下，按提示一步一步操作：选择语言-&gt;设置安装继续 或是 磁盘设置-&gt;选择安装目标分区-&gt; 直至『正在准备安装，你的电脑将自动重新启动』，进度条下方会显示『剩余大约7分钟』，当进度条下方显示为『剩余大约1秒钟』，请不要以为一会儿就完成了，这时系统还在拷贝文件做准备工作，处理会需要比较久的时间，大约15分钟~40分钟不等; 不要以为系统卡住；请保持耐心，安装准备工作完成后系统后自动重启，不要人为干预或强行中断和重启；较多朋友均是落入此坑中不能自拔；(常见于使用U盘安装时);    </p>
-</li>
-<li><p>待”准备安装”完成后，系统会自动重启，之后进入到Clover引导介面；请不要以为系统安装完成了，而去找Mac的硬盘分区引导, 你是找不到的；目前只是完成了安装的第一阶段—『准备安装』，第二阶段『正式安装』即将开始；你只需按第2步继续进入安装介面，并按系统提示一步一步来，最终会看到『安装系统到mac』的提示，进度条下方会显示安装剩余时间，一般十多分钟即可安装完成并重启；（安装过程中，尽量不时动动鼠标，不要让PC进入睡眠模式）</p>
-</li>
-<li><p>再次进入到Clover引导介面，此时就可以找到已安装Mac系统的硬盘引导了，找到后按回车键进入到初始化之个性设定，按提示逐步操作： 地区与时区选择-&gt;Intelnet连接方式设定-&gt;信息传输设定&gt;创建电脑帐户—&gt;Apple ID登录设定-&gt;看到桌面即表示安装完成；</p>
-</li>
-</ol>
-</blockquote>
 <hr>
-<h4 id="在Mac-OS-X-系统中生成-DSDT-aml-文件"><a href="#在Mac-OS-X-系统中生成-DSDT-aml-文件" class="headerlink" title="在Mac OS X 系统中生成 DSDT.aml 文件"></a>在Mac OS X 系统中生成 DSDT.aml 文件</h4><blockquote>
-<ol>
+<h3 id="X-在Mac-OS-X-系统中生成-DSDT-aml-文件"><a href="#X-在Mac-OS-X-系统中生成-DSDT-aml-文件" class="headerlink" title="X. 在Mac OS X 系统中生成 DSDT.aml 文件"></a>X. 在Mac OS X 系统中生成 DSDT.aml 文件</h3><ol>
 <li>编译，并处理错误</li>
 <li>IQR Fix</li>
 <li>编译生成DSDT.aml</li>
-<li>拷贝至Clover 引导盘中 /EFI/Clover/ACPI/patched文件夹中</li>
+<li>拷贝至Clover 引导盘中 <code>/EFI/Clover/ACPI/patched</code> 文件夹中</li>
 </ol>
-</blockquote>
-<h4 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h4><p>对于黑苹果的硬件驱动主要有显卡、网卡、声卡以及CPU变频，由于是台式机不考虑电池和亮度调节之类的；</p>
-<blockquote>
+<h4 id="XI-安装驱动"><a href="#XI-安装驱动" class="headerlink" title="XI. 安装驱动"></a>XI. 安装驱动</h4><p><em>对于黑苹果的硬件驱动主要有显卡、网卡、声卡以及CPU变频，由于是台式机不考虑电池和亮度调节之类的；</em></p>
 <ol>
 <li><p>有线网卡RTL8168E,我用不着，所以没有管它，不过需要的话可用RTL81xx的来驱动，也很方便，此文不作详述；</p>
 </li>
 <li><p>无线网卡BCM94322HM8L是免驱的，也省不少心力；</p>
 </li>
 <li><p>显卡是核显hd4600，在clover中注入参数及可，请参考Clover配置的部分；</p>
+</li>
+</ol>
 <pre><code>Fake ID / IntelGFX: 0x04128086
     ig-platform-id: 0x0c260000
-</code></pre></li>
-<li><p>声卡ALC892，默认无法驱动；同时存在与HDMI输出IQR冲突的问题，需要通过DSDT中打IQR Fix补丁来修复（后继在生成DSDT时一起处理）；我是先在BIOS中禁用HDMI Audio Output,再在Mac系统中用OS X Audio-ALC驱动包来安装 ALC892的驱动；</p>
+</code></pre><ol>
+<li><p>声卡ALC892，默认无法驱动；同时存在与HDMI输出IQR冲突的问题，需要通过DSDT中打IQR Fix补丁来修复（后继在生成DSDT时一起处理）；我是先在BIOS中禁用<code>HDMI Audio Output</code>,再在Mac系统中用OS X Audio-ALC驱动包来安装 ALC892的驱动；</p>
 </li>
 <li><p>在Mac OS X 系统中生成 DSDT.aml 文件，修复</p>
 </li>
 </ol>
-</blockquote>
-<h4 id="在硬盘上安装Clover-EFI引导"><a href="#在硬盘上安装Clover-EFI引导" class="headerlink" title="在硬盘上安装Clover EFI引导"></a>在硬盘上安装Clover EFI引导</h4>
+<h4 id="XII-在硬盘上安装Clover-EFI引导"><a href="#XII-在硬盘上安装Clover-EFI引导" class="headerlink" title="XII. 在硬盘上安装Clover EFI引导"></a>XII. 在硬盘上安装Clover EFI引导</h4>
 		</div>
 	
 
